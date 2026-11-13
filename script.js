@@ -159,6 +159,15 @@ if (navInner && navLinks) {
     drawer.appendChild(clone);
   });
 
+  // Resume actions in mobile drawer
+  const drawerResume = document.createElement('div');
+  drawerResume.style.cssText = 'display:flex;gap:0.5rem;padding-top:0.75rem;border-top:1px solid rgba(0,220,255,0.12);margin-top:0.5rem;';
+  drawerResume.innerHTML = `
+    <a href="resume.pdf" target="_blank" rel="noopener noreferrer" style="flex:1;text-align:center;padding:0.7rem 0.5rem;background:rgba(0,220,255,0.08);border:1px solid rgba(0,220,255,0.3);color:#00dcff;font-family:var(--ff-mono);font-size:0.75rem;border-radius:5px;text-decoration:none;">View Resume</a>
+    <a href="resume.pdf" download="AJAYKUMAR_J_Resume.pdf" style="flex:1;text-align:center;padding:0.7rem 0.5rem;background:#00dcff;color:#060a0e;font-family:var(--ff-mono);font-size:0.75rem;font-weight:700;border-radius:5px;text-decoration:none;">Download CV</a>
+  `;
+  drawer.appendChild(drawerResume);
+
   document.body.appendChild(drawer);
   navInner.appendChild(menuBtn);
 

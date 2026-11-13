@@ -63,18 +63,6 @@
     .tool-name { font-size: 0.85rem; font-weight: 600; }
     .tool-cat { font-family: var(--ff-mono); font-size: 0.62rem; color: var(--text-3); }
 
-    /* Resume download button */
-    .resume-btn {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-family: var(--ff-mono); font-size: 0.72rem; font-weight: 700;
-      padding: 0.5rem 1rem;
-      background: var(--cyan); color: var(--bg);
-      border-radius: var(--r);
-      text-decoration: none;
-      transition: opacity var(--t), transform var(--t);
-    }
-    .resume-btn:hover { opacity: 0.85; transform: translateY(-2px); }
-
     @media(max-width:900px){
       .domain-grid{grid-template-columns:1fr;}
       .tools-grid{grid-template-columns:repeat(2,1fr);}
@@ -102,10 +90,16 @@
       <a href="projects.html" class="nav-link">Projects</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </div>
-    <a href="resume.pdf" download="resume.pdf" class="resume-btn">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Download Resume
-    </a>
+    <div class="nav-resume">
+      <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn resume-btn-outline" title="View Resume in Browser">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span class="btn-text">View Resume</span>
+      </a>
+      <a href="resume.pdf" download="AJAYKUMAR_J_Resume.pdf" class="resume-btn" title="Download Resume PDF">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span class="btn-text">Download</span>
+      </a>
+    </div>
   </div>
 </nav>
 
